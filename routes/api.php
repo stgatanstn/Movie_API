@@ -43,3 +43,5 @@ Route::middleware('auth:sanctum')->get('/category', function (Request $request) 
 Route::middleware('auth:sanctum')->get('/movie', function (Request $request) {
     return $request->Movie();
 });
+Route::post("/auth/login",[AuthController::class,"login"]);
+Route::get("/logout",[AuthController::class,"logout"]);
